@@ -54,7 +54,7 @@ export class UserEdit extends Component {
       workNumber: PropTypes.string,
       mobileNumber: PropTypes.string,
     }),
-    loading: PropTypes.bool,
+    isLoaded: PropTypes.bool,
     getUser: PropTypes.func,
     updateUser: PropTypes.func,
     saving: PropTypes.bool,
@@ -77,9 +77,9 @@ export class UserEdit extends Component {
   }
 
   renderContent() {
-    const { loading, handleSubmit, saving } = this.props;
+    const { isLoaded, handleSubmit, saving } = this.props;
 
-    if (loading) {
+    if (!isLoaded) {
       return (
         <div className="has-text-centered">
           <h3 className="title">Loading User</h3>
@@ -180,7 +180,7 @@ UserEdit = reduxForm({
 })(UserEdit);
 
 const mapStateToProps = (state, ownProps) => ({
-  loading: state.users.edit.loading,
+  isLoaded: state.users.edit.isLoaded,
   saving: state.users.update.saving,
   user: state.users.edit.data,
   initialValues: state.users.edit.data,

@@ -8,7 +8,7 @@ describe('test UsersList component', () => {
     const props = {
       users: [],
       getUsers: jest.fn(),
-      loading: false,
+      isLoaded: false,
     };
     const enzymeWrapper = shallow(<UsersList {...props} />);
 
@@ -19,18 +19,18 @@ describe('test UsersList component', () => {
     const props = {
       users: [],
       getUsers: jest.fn(),
-      loading: false,
+      isLoaded: false,
     };
     const enzymeWrapper = mount(<UsersList {...props} />);
 
     expect(props.getUsers).toHaveBeenCalledTimes(1);
   });
 
-  it('should render a warning / loading message when users list is empty', () => {
+  it('should render a warning / isLoaded message when users list is empty', () => {
     const props = {
       users: [],
       getUsers: jest.fn(),
-      loading: false,
+      isLoaded: false,
     };
     const enzymeWrapper = shallow(<UsersList {...props} />);
 
@@ -45,7 +45,7 @@ describe('test UsersList component', () => {
         name: 'Marios',
       }],
       getUsers: jest.fn(),
-      loading: false,
+      isLoaded: true,
     };
     const enzymeWrapper = shallow(<UsersList {...props} />);
 

@@ -7,13 +7,13 @@ describe('users reducer', () => {
     .toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -40,13 +40,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -71,13 +71,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: true,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -104,13 +104,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: true,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -142,13 +142,13 @@ describe('users reducer', () => {
           id: 1,
           firstName: 'Marios',
         }],
-        loading: false,
+        isLoaded: true,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -175,13 +175,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: true,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -208,13 +208,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: true,
         errMsg: 'Some error',
         errCode: 500,
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -241,13 +241,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -272,13 +272,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: true,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -305,13 +305,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -340,7 +340,7 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -349,7 +349,7 @@ describe('users reducer', () => {
           id: 1,
           firstName: 'Marios',
         },
-        loading: false,
+        isLoaded: true,
         errMsg: '',
         errCode: '',
       },
@@ -376,13 +376,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -409,13 +409,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: true,
         errMsg: 'Some error',
         errCode: 500,
       },
@@ -442,13 +442,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -473,13 +473,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -506,13 +506,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -537,13 +537,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -570,13 +570,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -603,13 +603,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -636,13 +636,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -667,13 +667,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -700,13 +700,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -731,13 +731,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -764,13 +764,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -797,13 +797,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -830,13 +830,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -861,13 +861,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -903,13 +903,13 @@ describe('users reducer', () => {
             id: 3,
             name: 'Jane',
           }],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -950,13 +950,13 @@ describe('users reducer', () => {
           id: 2,
           name: 'Xristina',
         }],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
@@ -983,13 +983,13 @@ describe('users reducer', () => {
       reducer({
         list: {
           data: [],
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
         edit: {
           data: {},
-          loading: false,
+          isLoaded: false,
           errMsg: '',
           errCode: '',
         },
@@ -1016,13 +1016,13 @@ describe('users reducer', () => {
     ).toEqual({
       list: {
         data: [],
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },
       edit: {
         data: {},
-        loading: false,
+        isLoaded: false,
         errMsg: '',
         errCode: '',
       },

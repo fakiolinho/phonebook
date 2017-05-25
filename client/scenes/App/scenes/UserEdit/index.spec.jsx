@@ -13,7 +13,7 @@ describe('test UserEdit component', () => {
     const props = {
       user: null,
       getUser: jest.fn(),
-      loading: false,
+      isLoaded: false,
       params: {
         id: '1',
       },
@@ -27,7 +27,7 @@ describe('test UserEdit component', () => {
     const props = {
       user: null,
       getUser: jest.fn(),
-      loading: false,
+      isLoaded: false,
       params: {
         id: '1',
       },
@@ -37,11 +37,11 @@ describe('test UserEdit component', () => {
     expect(props.getUser).toHaveBeenCalledTimes(1);
   });
 
-  it('should render an appropriate message when user is loading', () => {
+  it('should render an appropriate message when user is isLoaded', () => {
     const props = {
       user: null,
       getUser: jest.fn(),
-      loading: true,
+      isLoaded: false,
       params: {
         id: '1',
       },
@@ -59,7 +59,7 @@ describe('test UserEdit component', () => {
         name: 'Marios',
       },
       getUser: jest.fn(),
-      loading: false,
+      isLoaded: true,
       params: {
         id: '1',
       },

@@ -15,7 +15,7 @@ export class UsersList extends Component {
       PropTypes.object,
     ),
     getUsers: PropTypes.func,
-    loading: PropTypes.bool,
+    isLoaded: PropTypes.bool,
     removeUser: PropTypes.func,
     selectedUser: PropTypes.object,
     selectUser: PropTypes.func,
@@ -39,9 +39,9 @@ export class UsersList extends Component {
   }
 
   renderContent() {
-    const { users, loading, selectedUser, deselectUser } = this.props;
+    const { users, isLoaded, selectedUser, deselectUser } = this.props;
 
-    if (loading) {
+    if (!isLoaded) {
       return (
         <div className="card">
           <div className="card-content">
@@ -94,7 +94,7 @@ export class UsersList extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-  loading: state.users.list.loading,
+  isLoaded: state.users.list.isLoaded,
   users: state.users.list.data,
   selectedUser: state.users.remove.data,
 });

@@ -10,7 +10,7 @@ const usersReducer = (state = initialState, action = {}) => {
           ...state.list,
           errMsg: '',
           errCode: '',
-          loading: true,
+          isLoaded: false,
         },
       };
     case types.GET_USERS_SUCCESS:
@@ -18,7 +18,7 @@ const usersReducer = (state = initialState, action = {}) => {
         ...state,
         list: {
           ...state.list,
-          loading: false,
+          isLoaded: true,
           data: action.payload,
         },
       };
@@ -29,7 +29,7 @@ const usersReducer = (state = initialState, action = {}) => {
           ...state.list,
           errMsg: action.errMsg,
           errCode: action.errCode,
-          loading: false,
+          isLoaded: true,
         },
       };
     case types.GET_USER_REQUEST:
@@ -39,7 +39,7 @@ const usersReducer = (state = initialState, action = {}) => {
           ...state.edit,
           errMsg: '',
           errCode: '',
-          loading: true,
+          isLoaded: false,
         },
       };
     case types.GET_USER_SUCCESS:
@@ -48,7 +48,7 @@ const usersReducer = (state = initialState, action = {}) => {
         edit: {
           ...state.edit,
           data: action.payload,
-          loading: false,
+          isLoaded: true,
         },
       };
     case types.GET_USER_ERROR:
@@ -58,7 +58,7 @@ const usersReducer = (state = initialState, action = {}) => {
           ...state.edit,
           errMsg: action.errMsg,
           errCode: action.errCode,
-          loading: false,
+          isLoaded: true,
         },
       };
     case types.CREATE_USER_REQUEST:

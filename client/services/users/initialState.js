@@ -1,13 +1,13 @@
 const initialState = {
   list: {
     data: [],
-    loading: false,
+    isLoaded: false,
     errMsg: '',
     errCode: '',
   },
   edit: {
     data: {},
-    loading: false,
+    isLoaded: false,
     errMsg: '',
     errCode: '',
   },
