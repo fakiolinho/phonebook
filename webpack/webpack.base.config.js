@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: ['babel-polyfill'],
@@ -43,6 +44,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
       filename: '../dist/index.html',
+    }),
+    new Dotenv({
+      path: resolve(__dirname, '../.env'),
+      systemvars: true,
     }),
   ],
 };
