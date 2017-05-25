@@ -8,7 +8,7 @@
     "build:server": "cross-env NODE_ENV=production babel ./server -d ./dist",
     "build:client": "cross-env NODE_ENV=production webpack --config ./webpack",
     "build": "npm run build:server && npm run build:client",
-    "predeploy": "npm run build",
+    "postinstall": "npm run build",
     "deploy": "cross-env NODE_ENV=production node ./dist/index.js",
     "test:server": "cross-env NODE_ENV=test lab -c -S -T ./node_modules/lab-babel -I core,System,asap,Observable,regeneratorRuntime,_babelPolyfill,__core-js_shared__ ./server",
     "test:client": "cross-env NODE_ENV=test jest",
