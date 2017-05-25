@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true,
+    "jest": true
+  },
+  "extends": "airbnb",
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config" : "./webpack/webpack.dev.config.js"
+      }
+    }
+  },
+  "rules": {
+    "no-unused-vars": 0,
+    "react/require-default-props": 0,
+    "no-shadow": 0
+  }
+}
