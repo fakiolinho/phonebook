@@ -2,8 +2,12 @@ import path from 'path';
 import Hapi from 'hapi';
 import mongoose from 'mongoose';
 import Webpack from 'webpack';
+import dotenv from 'dotenv';
 
 import routes from './routes';
+
+// Parse Environmental Vars
+dotenv.config();
 
 // MongoDB Connection
 mongoose.Promise = global.Promise;
@@ -12,7 +16,10 @@ const options = {
   replset: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
 };
 
-mongoose.connect(require('./config')[process.env.NODE_ENV], options);
+const { MONGO_URI, HOST, PORT, NODE_ENV } = process.env;
+const mongoURI = NODE_ENV === 'test' ? 'mongodb://localhost/test' : MONGO_URI;
+
+mongoose.connect(mongoURI, options);
 
 const db = mongoose.connection;
 db.on('error', (err) => {
@@ -21,8 +28,8 @@ db.on('error', (err) => {
 
 // Hapi Server
 const server = new Hapi.Server();
-const host = 'localhost';
-const port = 3000;
+const host = HOST;
+const port = PORT;
 
 server.connection({ host, port });
 
@@ -35,7 +42,7 @@ server.register(require('inert'), (err) => {
   const compiler = Webpack(webpackConfig);
 
   // HMR for Dev ENV
-  if (process.env.NODE_ENV === 'development') {
+  if (NODE_ENV === 'development') {
     const devMiddleware = require('webpack-dev-middleware')(compiler, {
       host,
       port,
