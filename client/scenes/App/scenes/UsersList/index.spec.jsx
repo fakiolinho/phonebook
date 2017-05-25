@@ -30,7 +30,7 @@ describe('test UsersList component', () => {
     const props = {
       users: [],
       getUsers: jest.fn(),
-      isLoaded: false,
+      isLoaded: true,
     };
     const enzymeWrapper = shallow(<UsersList {...props} />);
 

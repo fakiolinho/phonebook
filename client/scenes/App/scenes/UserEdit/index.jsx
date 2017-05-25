@@ -82,78 +82,11 @@ export class UserEdit extends Component {
     if (!isLoaded) {
       return (
         <div className="has-text-centered">
-          <h3 className="title">Loading User</h3>
           <span className="icon is-large"><i className="fa fa-refresh fa-spin" /></span>
         </div>
       );
     }
 
-    return (
-      <form onSubmit={handleSubmit(this.handleSubmit)}>
-        <div className="columns">
-          <div className="column">
-            <Field
-              name="firstName"
-              type="text"
-              component={FormField}
-              label="First Name"
-            />
-          </div>
-
-          <div className="column">
-            <Field
-              name="lastName"
-              type="text"
-              component={FormField}
-              label="Last Name"
-            />
-          </div>
-
-          <div className="column">
-            <Field
-              name="email"
-              type="email"
-              component={FormField}
-              label="Email"
-            />
-          </div>
-        </div>
-
-        <div className="columns">
-          <div className="column">
-            <Field
-              name="homeNumber"
-              type="text"
-              component={FormField}
-              label="Home Number"
-            />
-          </div>
-
-          <div className="column">
-            <Field
-              name="workNumber"
-              type="text"
-              component={FormField}
-              label="Work Number"
-            />
-          </div>
-
-          <div className="column">
-            <Field
-              name="mobileNumber"
-              type="text"
-              component={FormField}
-              label="Mobile Number"
-            />
-          </div>
-        </div>
-
-        <FormButton saving={saving}>Submit</FormButton>
-      </form>
-    );
-  }
-
-  render() {
     return (
       <div className="card">
         <header className="card-header">
@@ -163,11 +96,75 @@ export class UserEdit extends Component {
         </header>
         <div className="card-content">
           <div className="content">
-            {this.renderContent()}
+            <form onSubmit={handleSubmit(this.handleSubmit)}>
+              <div className="columns">
+                <div className="column">
+                  <Field
+                    name="firstName"
+                    type="text"
+                    component={FormField}
+                    label="First Name"
+                  />
+                </div>
+
+                <div className="column">
+                  <Field
+                    name="lastName"
+                    type="text"
+                    component={FormField}
+                    label="Last Name"
+                  />
+                </div>
+
+                <div className="column">
+                  <Field
+                    name="email"
+                    type="email"
+                    component={FormField}
+                    label="Email"
+                  />
+                </div>
+              </div>
+
+              <div className="columns">
+                <div className="column">
+                  <Field
+                    name="homeNumber"
+                    type="text"
+                    component={FormField}
+                    label="Home Number"
+                  />
+                </div>
+
+                <div className="column">
+                  <Field
+                    name="workNumber"
+                    type="text"
+                    component={FormField}
+                    label="Work Number"
+                  />
+                </div>
+
+                <div className="column">
+                  <Field
+                    name="mobileNumber"
+                    type="text"
+                    component={FormField}
+                    label="Mobile Number"
+                  />
+                </div>
+              </div>
+
+              <FormButton saving={saving}>Submit</FormButton>
+            </form>
           </div>
         </div>
       </div>
     );
+  }
+
+  render() {
+    return this.renderContent();
   }
 }
 

@@ -43,13 +43,8 @@ export class UsersList extends Component {
 
     if (!isLoaded) {
       return (
-        <div className="card">
-          <div className="card-content">
-            <div className="content has-text-centered">
-              <h3 className="title">Loading Users</h3>
-              <span className="icon is-large"><i className="fa fa-refresh fa-spin" /></span>
-            </div>
-          </div>
+        <div className="has-text-centered">
+          <span className="icon is-large"><i className="fa fa-refresh fa-spin" /></span>
         </div>
       );
     }
